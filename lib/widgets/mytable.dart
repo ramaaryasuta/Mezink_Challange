@@ -13,6 +13,7 @@ class MyTableData extends StatelessWidget {
   Widget build(BuildContext context) {
     /// checking list condition
     if (context.watch<DataServices>().dropFilterList.isNotEmpty) {
+      /// When dropFilterList is not empty
       return SizedBox(
         height: MediaQuery.of(context).size.height * 0.5,
         width: MediaQuery.of(context).size.width,
@@ -21,6 +22,7 @@ class MyTableData extends StatelessWidget {
         ),
       );
     } else if (context.watch<DataServices>().filteredList.isNotEmpty) {
+      /// When filteredList on query is not empty
       return SizedBox(
         height: MediaQuery.of(context).size.height * 0.5,
         width: MediaQuery.of(context).size.width,
@@ -30,6 +32,7 @@ class MyTableData extends StatelessWidget {
       );
     } else if (context.watch<DataServices>().filteredList.isEmpty &&
         context.watch<DataServices>().query.isNotEmpty) {
+      /// When filteredList on query is empty
       return Center(
         child: SizedBox(
           height: MediaQuery.of(context).size.height * 0.5,
@@ -50,6 +53,7 @@ class MyTableData extends StatelessWidget {
         ),
       );
     } else {
+      /// Original Data
       return SizedBox(
         height: MediaQuery.of(context).size.height * 0.5,
         width: MediaQuery.of(context).size.width,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// screens
 import 'package:mezink_challange/pages/home.dart';
 import 'services/data_service.dart';
 
@@ -17,7 +16,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => DataServices()),
-        // add more provider here if needed
+
+        /// add more provider here if needed
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

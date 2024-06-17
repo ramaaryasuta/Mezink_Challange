@@ -107,6 +107,13 @@ class DataServices with ChangeNotifier {
     notifyListeners();
   }
 
+  /// set filter value
+  void setFilter(String selectedFilter) {
+    filter = selectedFilter;
+    notifyListeners();
+  }
+
+  /// filter user list based on role
   void usersListFilter() {
     if (filter != 'All') {
       dropFilterList =
@@ -119,11 +126,7 @@ class DataServices with ChangeNotifier {
     }
   }
 
-  void setFilter(String selectedFilter) {
-    filter = selectedFilter;
-    notifyListeners();
-  }
-
+  /// next page data
   void nextPage() {
     pages++;
     notifyListeners();
@@ -131,6 +134,8 @@ class DataServices with ChangeNotifier {
   }
 
   void previousPage() {
+    /// check if pages is greater than 1
+    /// if pages is less than 1 you can't go less from 1
     if (pages > 1) {
       pages--;
       notifyListeners();

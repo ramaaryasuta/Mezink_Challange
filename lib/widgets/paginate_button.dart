@@ -26,6 +26,8 @@ class PaginationButtonWidget extends StatelessWidget {
             const SizedBox(width: 10),
             Text('Page ${value.pages.toString()}'),
             const SizedBox(width: 10),
+
+            /// Checking if pages is less than maxPage
             value.pages < value.maxPage
                 ? IconButton(
                     onPressed: () {
@@ -38,29 +40,5 @@ class PaginationButtonWidget extends StatelessWidget {
         );
       },
     );
-    // return Row(
-    //   mainAxisAlignment: MainAxisAlignment.center,
-    //   children: [
-    //     context.read<DataServices>().pages > 1
-    //         ? IconButton(
-    //             onPressed: () {
-    //               context.read<DataServices>().previousPage();
-    //             },
-    //             icon: const Icon(Icons.arrow_back_ios_rounded),
-    //           )
-    //         : const SizedBox(width: 30),
-    //     const SizedBox(width: 10),
-    //     Text('Page ${context.read<DataServices>().pages.toString()}'),
-    //     const SizedBox(width: 10),
-
-    //          IconButton(
-    //             onPressed: () {
-    //               context.read<DataServices>().nextPage();
-    //             },
-    //             icon: const Icon(Icons.arrow_forward_ios_rounded),
-    //           )
-
-    //   ],
-    // );
   }
 }
