@@ -1,16 +1,18 @@
-# mezink_challange
+# Mezink Web Challange
 
-A new Flutter project.
+hosting : https://mezink-challange.web.app/
 
-## Getting Started
+![image](https://github.com/ramaaryasuta/Mezink_Challange/assets/151166809/908ce1c3-9b4a-4515-88bd-87f57b58d6fc)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Documentation
+This project using https://reqres.in/ APi for the data
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+i using odd or even ID to create dummy role for every object user.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+feature :
+
+- Search Query (makes it easier for users to find the data they need)
+- Filter (separate roles using dropdown buttons to filter)
+- Ascending & Descending (makes it easier to search for data sequentially)
+- Pagination (speed up fetching data json)
